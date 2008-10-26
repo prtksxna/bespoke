@@ -5,6 +5,13 @@ class SessionsController < ApplicationController
 
   # render new.rhtml
   def new
+		@url =  params[:url]
+		unless User.find_by_url(@url)
+			flash[:notice] = "No such organization"
+			redirect_back_or_default('/')
+		else
+			@org = User.find_by_url(@url).org
+		end
   end
 
   def create

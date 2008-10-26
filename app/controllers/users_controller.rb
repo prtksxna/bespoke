@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     # request forgery protection.
     # uncomment at your own risk
     # reset_session
-		params[:user]["org"] = params[:user]["org"].downcase.gsub(/[^\w\s]/,'').gsub(' ', '')
+		params[:user]["url"] = params[:user]["url"].downcase.gsub(/[^\w\s]/,'').gsub(' ', '')
     @user = User.new(params[:user])
     @user.save
     if @user.errors.empty?
