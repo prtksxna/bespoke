@@ -9,7 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 4) do
+
+  create_table "people", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "telephone"
+    t.string   "email"
+    t.text     "addr_addr"
+    t.text     "addr_extended"
+    t.text     "addr_street"
+    t.string   "addr_city"
+    t.string   "addr_region"
+    t.string   "addr_country"
+    t.string   "photo"
+    t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login"
