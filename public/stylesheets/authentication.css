@@ -1,0 +1,33 @@
+body{
+	background-image: url('../images/noise.jpg');
+	text-align: center;
+	color:	#2d2d2d;
+	font: 1em "Helvetica", Verdana, Arial, sans-serif;
+}
+
+div#container{
+	margin: 60px auto;
+	width: 350px;
+	background: white;
+	text-align: left;
+	border: solid 3px #CACACA;
+	border-bottom-color: #545454;
+	padding: 10px;
+}
+
+label{
+	font: normal small-caps normal 0.75em Arial, sans-serif;
+	font-variant:	small-caps;
+}
+
+input[type=submit]{
+	border: none;
+	background: transparent url('../images/button-now.gif');
+	width: 120px;
+	height: 30px;
+	font: 80% Arial;
+	margin: 0;
+}
+input[type=text]{
+	font-variant: small-caps;
+}

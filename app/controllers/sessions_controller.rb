@@ -2,6 +2,7 @@
 class SessionsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
+	layout 'auth'
 
   # render new.rhtml
   def new
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
 		else
 			@org = User.find_by_url(@url).org
 		end
+		@title = "Login/"+@org.capitalize
   end
 
   def create
