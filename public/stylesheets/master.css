@@ -1,0 +1,65 @@
+/*Text Elements*/
+h1{
+	background: #BBEDFF;
+	border-bottom: 1px solid #6CF;
+	color: #FFFFFF;
+	padding: 20px;
+	margin: -10px;
+	margin-bottom: 30px;
+	letter-spacing: -0.1em;
+}
+p.form_actions{
+	text-align: right;
+	margin-top: 50px;
+}
+
+
+/*Form Elements*/
+label{
+	font: normal small-caps normal 0.75em Arial, sans-serif;
+	font-variant:	small-caps;
+}
+
+input[type=button]{
+	border: none;
+	background: transparent url('../images/button-now.gif');
+	width: 120px;
+	height: 30px;
+	font: 80% Arial;
+	margin: 0;
+}
+input[type=submit].positive{
+	background: #80FF00;
+	border: none;
+	color: white;
+	padding: 10px;
+	font-size: 100%;
+	border-bottom: solid 2px #66C705;
+	cursor: pointer;
+}
+
+a.negative{
+	background: #F00;
+	border: none;
+	color: white;
+	text-decoration: none;
+	padding: 13px;
+	padding-bottom: 12px;
+	font-size: 100%;
+	border-bottom: solid 2px #800101;
+}
+
+input[type=text]{
+	font-size: 100%;
+	border: 1px solid #999;
+}
+input[type=password]{
+	font-size: 100%;
+	border: 1px solid #999;	
+}
+input[type=text]:focus{
+	background: #C8F2FF;
+}
+input[type=password]:focus{
+	background: #C8F2FF;
+}

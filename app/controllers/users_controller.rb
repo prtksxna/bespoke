@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   # render new.rhtml
   def new
+		@title = "Bespoke/Sign Up"
   end
 
   def create
