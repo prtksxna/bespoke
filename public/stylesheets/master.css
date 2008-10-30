@@ -12,12 +12,51 @@ p.form_actions{
 	text-align: right;
 	margin-top: 50px;
 }
+p.error-flash{
+	background: #FFD4D7;
+	border: 1px solid #FF6462;
+	color: #8E271D;
+	padding: 5px;
+}
 
+p.notice-flash{
+	background: #FFF9CA;
+	border: 1px solid #FFCE00;
+	color: #178F1A;
+	padding: 5px;
+}
+p.notice-help{
+	background: #FFF9CA;
+	border: 1px solid #FFCE00;
+	color: #1B3D6D;
+	padding: 5px;
+}
 
 /*Form Elements*/
+fieldset{
+	border: 1px solid #999;
+	width: 50%;
+	background: #D6D6D6;
+}
+legend{
+	font: normal small-caps normal 0.85em Arial, sans-serif;
+	background: #ededed;
+	border: 1px solid #999;
+}
+
 label{
 	font: normal small-caps normal 0.75em Arial, sans-serif;
-	font-variant:	small-caps;
+}
+
+form{
+	border: solid 1px #999;
+	background: #EDEDED;
+	padding: 10px;
+}
+form.normal{
+	border: none;
+	background: #fff;
+	padding: 0;
 }
 
 input[type=button]{

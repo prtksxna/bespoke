@@ -4,6 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.xml
   def index
+		@pagetitle = "People"
     @people = Person.find(:all)
 
     respond_to do |format|
@@ -16,7 +17,7 @@ class PeopleController < ApplicationController
   # GET /people/1.xml
   def show
     @person = Person.find(params[:id])
-
+		@pagetitle = @person.first_name
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @person }
@@ -26,6 +27,7 @@ class PeopleController < ApplicationController
   # GET /people/new
   # GET /people/new.xml
   def new
+		@pagetitle = "New Person"
     @person = Person.new
 
     respond_to do |format|
@@ -37,6 +39,7 @@ class PeopleController < ApplicationController
   # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
+		@pagetitle = @person.first_name + "/Editing" 
   end
 
   # POST /people
