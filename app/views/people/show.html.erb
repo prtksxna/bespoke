@@ -1,63 +1,25 @@
-<p>
-  <b>First name:</b>
-  <%=h @person.first_name %>
-</p>
+<% div_for(@person, :class => "vcard") do %>
+  <span class="fn"><%= @person.first_name + " " + @person.last_name %></span>
+  <div class="adr">
+    <div class="street-address">
+      <%= @person.addr_addr %><br />
+      <%= @person.addr_extended %><br />
+      <%= @person.addr_street%><br />
+    </div>
+    <span class="locality"><%= @person.addr_city %></span>,  
+    <span class="region"><%= @person.addr_region %></span>
+    <div class="country-name"><%= @person.addr_country %></div>
+  </div>
+  <div class="tel">
+    <span class="type">Home</span> <%= @person.telephone %>
+  </div>
+  <div>
+    Email: <span class="email"><%= mail_to @person.email %></span>
+  </div>
+<% end %>
 
-<p>
-  <b>Last name:</b>
-  <%=h @person.last_name %>
-</p>
 
-<p>
-  <b>Telephone:</b>
-  <%=h @person.telephone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @person.email %>
-</p>
-
-<p>
-  <b>Addr addr:</b>
-  <%=h @person.addr_addr %>
-</p>
-
-<p>
-  <b>Addr extended:</b>
-  <%=h @person.addr_extended %>
-</p>
-
-<p>
-  <b>Addr street:</b>
-  <%=h @person.addr_street %>
-</p>
-
-<p>
-  <b>Addr city:</b>
-  <%=h @person.addr_city %>
-</p>
-
-<p>
-  <b>Addr region:</b>
-  <%=h @person.addr_region %>
-</p>
-
-<p>
-  <b>Addr country:</b>
-  <%=h @person.addr_country %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%=h @person.photo %>
-</p>
-
-<p>
-  <b>Role:</b>
-  <%=h @person.role %>
-</p>
-
+<br />
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
